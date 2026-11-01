@@ -1,0 +1,19 @@
+{
+  "name": "harvey-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --configLoader native",
+    "build": "vite build --configLoader native",
+    "preview": "vite preview --host 0.0.0.0 --configLoader native"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.2",
+    "vite": "^8.3.5"
+  }
+}
