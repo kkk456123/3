@@ -1,0 +1,3 @@
+.crosshair-canvas{user-select:none;contain:strict}
+@media (any-hover:none),(any-pointer:coarse) and (not (any-pointer:fine)){.crosshair-canvas{display:none}}
+@media (forced-colors:active){.crosshair-canvas{display:none}}
