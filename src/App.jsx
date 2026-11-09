@@ -168,7 +168,7 @@ export default function App() {
         <div className="opening-curtain opening-curtain-top" aria-hidden="true" /><div className="opening-curtain opening-curtain-bottom" aria-hidden="true" /><div className="opening-seam" aria-hidden="true" />
         <div className="hero-body container">
           <p className="hero-eyebrow"><span className="status-dot" />VISUAL / AI / BRAND DESIGNER</p>
-          <h1 aria-label="Harvey Portfolio"><span className="hero-line-mask"><span className="hero-name" aria-hidden="true">{'HARVEY'.split('').map((letter, index) => <span className="hero-glyph" key={index}>{letter}</span>)}<span className="hero-sparkles">✦<small>✦</small></span></span></span><span className="hero-line-mask"><span className="hero-title" aria-hidden="true">PORTFOLIO</span></span></h1>
+          <h1 aria-label="Harvey Portfolio"><span className="hero-line-mask"><span className="hero-name" aria-hidden="true">{'HARVEY'.split('').map((letter, index) => <span className="hero-glyph" key={index}>{letter}</span>)}<span className="hero-sparkles">✦<small>✦</small></span></span></span><span className="hero-line-mask"><span className="hero-title" aria-hidden="true">{'PORTFOLIO'.split('').map((letter, index) => <span className="hero-title-glyph" key={index}>{letter}</span>)}</span></span></h1>
           <p className="hero-description">用视觉表达，让品牌被看见。<br />以 3D 与 AI，探索设计的更多可能。</p>
         </div>
         <HeroOrbit previews={heroPreviews} onSelect={openPreview} paused={Boolean(selectedProject)} />
@@ -177,10 +177,10 @@ export default function App() {
       <section id="about" className="about module-section"><div className="container">
         <SectionTitle title="WORK EXPERIENCE" subtitle="个人经历" />
         <div className="profile-grid">
-          <div className="profile-portrait" tabIndex={0} aria-label="慎佳威 Harvey 与猫咪的彩色插画"><img {...imageProps('assets/portrait-illustration.webp', '(max-width: 800px) calc(100vw - 44px), 550px')} alt="蓝色背景下的 Harvey 与橘猫彩色手绘插画，左上角写着 Me & My Cat" loading="lazy" /><span className="portrait-tag">7 YEARS / VISUAL · 3D · AI</span><div className="portrait-label"><span>慎佳威</span><small>HARVEY / DESIGNER</small></div><BorderGlow /></div>
+          <div className="profile-portrait" tabIndex={0} aria-label="慎佳威 Harvey 与猫咪的彩色插画"><img {...imageProps('assets/responsive/114-1086.webp', '(max-width: 800px) calc(100vw - 44px), 550px')} alt="蓝色背景下的 Harvey 与橘猫彩色手绘插画，左上角写着 Me & My Cat" loading="lazy" /><span className="portrait-tag">7 YEARS / VISUAL · 3D · AI</span><div className="portrait-label"><span>慎佳威</span><small>HARVEY / DESIGNER</small></div><BorderGlow /></div>
           <div className="profile-content"><p className="eyebrow lime">ABOUT ME</p><h3 aria-label="Hi, I am Harvey!"><HoverText text="Hi, I am Harvey!" /></h3><p className="profile-intro">我是慎佳威，一名视觉 / AI / 品牌设计师。专注产品视觉与三维渲染，以设计连接品牌、产品与用户，也持续探索 AI 为商业视觉带来的新可能。</p>
             <div className="profile-details"><div><small>职业方向</small><strong>Visual / 3D / AI Designer</strong></div><div><small>所在城市</small><strong>深圳 · SHENZHEN</strong></div><div><small>手机</small><a href={'tel:' + profile.phone}>{profile.phone}</a></div><div><small>邮箱</small><a href={'mailto:' + profile.email}>{profile.email}</a></div></div>
-            <div className="profile-stats"><div><strong>7<span>+</span></strong><small>年设计实战经验</small></div><div><strong>3D</strong><small>产品视觉全流程</small></div><div><strong>04</strong><small>精选作品系列</small></div></div>
+            <div className="profile-stats"><div><strong>7<span>+</span></strong><small>年设计实战经验</small></div><div><strong>3D</strong><small>产品视觉全流程</small></div><div><strong>05</strong><small>项核心能力</small></div></div>
             <div className="profile-bottom"><div><small className="eyebrow lime">EXPLORING NOW</small><div className="skill-tags"><span>AI 场景探索</span><span>光影与材质</span><span>产品视觉表达</span></div></div></div>
           </div>
         </div>

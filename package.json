@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0 --configLoader native",
-    "build": "vite build --configLoader native",
+    "check:images": "node scripts/check-images.mjs",
+    "build": "npm run check:images && vite build --configLoader native && node scripts/check-dist.mjs",
     "preview": "vite preview --host 0.0.0.0 --configLoader native"
   },
   "dependencies": {

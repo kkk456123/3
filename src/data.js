@@ -1,4 +1,7 @@
+import { modelGallery } from './modelGallery.js'
+import { techGallery } from './techGallery.js'
 import { lifestyleGallery } from './lifestyleGallery.js'
+import { litterboxGallery } from './litterboxGallery.js'
 import { motionGallery, renderGallery, usamsGallery } from './projectGalleries.js'
 
 export const profile = {
@@ -13,7 +16,7 @@ export const projects = [
   {
     id: 'usams', number: '01', name: 'USAMS 优胜仕', subtitle: '让产品，成为视觉的主角。',
     category: '品牌视觉', tags: 'BRAND VISUAL / 3D RENDERING', year: '2025',
-    cover: 'assets/usams-cover.webp', image: 'assets/project-panels/usams/01.webp',
+    cover: 'assets/responsive/001-1700.webp', image: 'assets/responsive/013-1920.webp',
     images: usamsGallery,
     galleryClass: 'dialog-gallery-six',
     framedImages: true,
@@ -21,24 +24,24 @@ export const projects = [
     role: '产品建模 · 材质渲染 · 电商视觉',
   },
   {
-    id: 'jile', number: '02', name: '机乐堂 · 日常新视角', subtitle: '以生活感，建立产品与人的连接。',
-    category: '产品视觉', tags: 'PRODUCT VISUAL / E-COMMERCE', year: '2025',
-    cover: 'assets/jile-cover.webp', image: 'assets/lifestyle-gallery/01.webp',
-    images: lifestyleGallery,
-    galleryClass: 'dialog-gallery-paired',
+    id: 'jile', number: '02', name: '智能猫砂盆视觉设计', subtitle: '以清晰的视觉叙事呈现产品体验。',
+    category: '产品视觉', tags: 'PRODUCT VISUAL / A+ CONTENT', year: '2025',
+    cover: 'assets/responsive/litterbox-cover-1600.webp',
+    images: litterboxGallery,
+    galleryClass: 'dialog-gallery-six',
     framedImages: true,
-    description: '通过产品建模、场景渲染与后期精修，将产品卖点转化为易于感知的视觉信息。聚焦跨境电商与亚马逊页面中的产品呈现，让功能、材质与使用情境共同讲述产品故事。',
-    role: '产品建模 · 场景渲染 · 详情页视觉',
+    description: '围绕智能猫砂盆，从核心功能、使用体验到居家场景，以连续的电商平面视觉呈现产品信息。通过场景渲染、卖点编排与版式设计，建立清晰一致的产品叙事。',
+    role: '产品视觉 · A+ 页面设计 · 场景表达',
   },
   {
     id: 'ai', number: '03', name: '产品动态 · 耳机视觉', subtitle: '以动态镜头，呈现产品的质感与细节。',
     category: '产品动态', tags: 'PRODUCT MOTION / 3D ANIMATION', year: '2025',
-    cover: 'assets/motion-cover.webp', image: 'assets/project-panels/motion/01.webp',
+    cover: 'assets/responsive/006-1376.webp', image: 'assets/responsive/079-1920.webp',
     images: motionGallery,
     galleryLabel: '分镜脚本',
     videos: [
-      { src: 'assets/joyroom-earbuds.mp4', poster: 'assets/motion-cover.webp', title: 'JOYROOM Funpods FN2 · 耳机动态', autoPlay: true },
-      { src: 'assets/usams-xh09.mp4', poster: 'assets/usams-xh09-poster.webp', title: 'USAMS XH09 · 星河系列耳机动态外观', autoPlay: false },
+      { src: 'assets/joyroom-earbuds.mp4', poster: 'assets/responsive/006-1376.webp', title: 'JOYROOM Funpods FN2 · 耳机动态', autoPlay: true },
+      { src: 'assets/usams-xh09.mp4', poster: 'assets/responsive/115-1920.webp', title: 'USAMS XH09 · 星河系列耳机动态外观', autoPlay: false },
     ],
     description: '以 JOYROOM Funpods FN2 耳机与 USAMS XH09 星河系列耳机为载体，通过镜头运动、材质光影与节奏编排，呈现耳机外观、结构细节与产品质感。这里展示两段动态成片及分镜画面，记录产品从静态造型到动态视觉表达的过程。',
     role: '产品动画 · 镜头与分镜 · 材质灯光 · 渲染与合成',
@@ -46,7 +49,7 @@ export const projects = [
   {
     id: 'render', number: '04', name: '光影与材质研究', subtitle: '从细节出发，让每一帧更有质感。',
     category: '产品视觉', tags: '3D STUDIES / MATERIAL & LIGHT', year: '2024',
-    cover: 'assets/scene-render-cover.webp', image: 'assets/project-panels/render/01.webp',
+    cover: 'assets/responsive/012-1920.webp', image: 'assets/responsive/090-1280.webp',
     images: renderGallery,
     galleryClass: 'dialog-gallery-six',
     framedImages: true,
@@ -58,9 +61,29 @@ export const projects = [
 // 首屏补充作品独立于下方四张精选作品卡片。
 export const previewProjects = [
   {
+    id: 'product-models', name: '产品造型 · 建模与质感',
+    category: '产品建模', tags: 'PRODUCT MODELING / MATERIAL & DETAIL',
+    cover: 'assets/responsive/model-01-1600.webp',
+    images: modelGallery,
+    framedImages: true,
+    galleryClass: 'dialog-gallery-six',
+    description: '从充电头、充电宝到布纹收纳盒、车载搭电宝与日常配件，以干净的白底呈现产品造型、材质与结构细节。通过建模、灯光与精修，让每一款产品的设计语言清晰可见。',
+    role: '产品建模 · 材质塑造 · 灯光渲染 · 后期精修',
+  },
+  {
+    id: 'chip-snow', name: '芯片与冰雪 · 渲染探索',
+    category: '产品渲染', tags: 'PRODUCT RENDERING / TECHNOLOGY & SCENE',
+    cover: 'assets/responsive/tech-chip-1-1920.webp',
+    images: techGallery,
+    framedImages: true,
+    galleryClass: 'dialog-gallery-six',
+    description: '从冰雪场景中的产品呈现，到电路与芯片的微观构建，以冷色光影、材质细节和空间层次，探索消费电子产品的科技感与视觉表现。',
+    role: '场景构建 · 材质灯光 · 产品渲染 · 后期合成',
+  },
+  {
     id: 'pet-scenes', name: '宠物智能产品 · 生活场景',
     category: '场景视觉', tags: 'PET PRODUCT / LIFESTYLE RENDERING',
-    cover: 'assets/pet-scenes/01-cover.webp',
+    cover: 'assets/responsive/002-1280.webp',
     images: lifestyleGallery,
     framedImages: true,
     description: '将宠物智能产品融入真实的居家情境，以温暖的自然光、木质空间与猫咪互动，呈现产品与日常生活的关系。画面围绕客厅、居家角落与陪伴场景展开，从猫砂盆到饮水设备，在柔和光影中表达产品的体积、材质与生活感。',
@@ -85,19 +108,23 @@ export const capabilities = [
 
 // 首屏作品切片；冷暖与明暗交错，循环首尾也避免同组场景相邻。
 export const heroPreviews = [
-  { label: '产品的另一面', image: 'assets/usams-cover.webp', projectId: 'usams' },
-  { label: '日常的陪伴', image: 'assets/pet-scenes/01-cover.webp', projectId: 'pet-scenes' },
-  { label: '声音的形状', image: 'assets/preview-scenes/05.webp', projectId: 'ai' },
-  { label: '光落之处', image: 'assets/preview-scenes/07.webp', projectId: 'render' },
-  { label: '温暖的角落', image: 'assets/pet-scenes/02-cover.webp', projectId: 'pet-scenes' },
-  { label: '耳机动态视觉', image: 'assets/motion-cover.webp', projectId: 'ai' },
-  { label: '海风与光', image: 'assets/preview-scenes/08.webp', projectId: 'render' },
-  { label: '宠物与生活', image: 'assets/pet-scenes/03-cover.webp', projectId: 'pet-scenes' },
-  { label: '午后的呼吸', image: 'assets/preview-scenes/09.webp', projectId: 'render' },
-  { label: '陪伴的细节', image: 'assets/preview-scenes/03.webp', projectId: 'pet-scenes' },
-  { label: '日常新视角', image: 'assets/jile-cover.webp', projectId: 'jile' },
-  { label: '光影与空间', image: 'assets/scene-render-cover.webp', projectId: 'render' },
+  { label: '产品的另一面', image: 'assets/responsive/001-thumb.webp', projectId: 'usams' },
+  { label: '日常的陪伴', image: 'assets/responsive/002-thumb.webp', projectId: 'pet-scenes' },
+  { label: '声音的形状', image: 'assets/responsive/003-thumb.webp', projectId: 'ai' },
+  { label: '光落之处', image: 'assets/responsive/004-thumb.webp', projectId: 'render' },
+  { label: '温暖的角落', image: 'assets/responsive/005-thumb.webp', projectId: 'pet-scenes' },
+  { label: '耳机动态视觉', image: 'assets/responsive/006-thumb.webp', projectId: 'ai' },
+  { label: '海风与光', image: 'assets/responsive/007-thumb.webp', projectId: 'render' },
+  { label: '宠物与生活', image: 'assets/responsive/008-thumb.webp', projectId: 'pet-scenes' },
+  { label: '充电的秩序', image: 'assets/responsive/usams-014-thumb.webp', projectId: 'usams' },
+  { label: '芯片与冰雪', image: 'assets/responsive/tech-chip-1-thumb.webp', projectId: 'chip-snow' },
+  { label: '午后的呼吸', image: 'assets/responsive/009-thumb.webp', projectId: 'render' },
+  { label: '充电的秩序', image: 'assets/responsive/usams-render-3-thumb.webp', projectId: 'usams' },
+  { label: '陪伴的细节', image: 'assets/responsive/010-thumb.webp', projectId: 'pet-scenes' },
+  { label: '猫砂盆的日常', image: 'assets/responsive/litterbox-graphic-thumb.webp', projectId: 'jile' },
+  { label: '产品造型与质感', image: 'assets/responsive/model-01-thumb.webp', projectId: 'product-models' },
+  { label: '光影与空间', image: 'assets/responsive/012-thumb.webp', projectId: 'render' },
 ]
 
 // 首屏视频按此顺序连续播放，结束后回到第一段。
-export const heroVideos = ['assets/video/hero-black.mp4', 'assets/video/hero-white.mp4']
+export const heroVideos = ['assets/video/hero-black-original.mp4', 'assets/video/hero-white-original.mp4']

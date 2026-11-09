@@ -1,6 +1,10 @@
 import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react'
 import './CareerHorizon.css'
 
+function HoverText({ text }) {
+  return <span className="hover-text" aria-hidden="true">{Array.from(text, (letter, index) => <span className="hover-letter" key={index}>{letter}</span>)}</span>
+}
+
 const stars = Array.from({ length: 145 }, (_, index) => ({
   x: (index * 719 + 37) % 1500,
   y: (index * 137 + index * index * 3) % 570,
@@ -123,7 +127,7 @@ export default function CareerHorizon({ experiences }) {
       {stars.map((star, index) => <circle key={index} cx={star.x} cy={star.y} r={star.radius} opacity={star.opacity} fill={index % 3 === 0 ? '#a4b9df' : '#d8c4a8'} />)}
     </svg>
     <div className="career-scene-heading">
-      <div><p className="eyebrow">CAREER PATH</p><h3 id="career-title">工作经历，<br />步履不停。</h3></div>
+      <div><p className="eyebrow">CAREER PATH</p><h3 id="career-title" aria-label="工作经历，步履不停。"><span aria-hidden="true"><HoverText text="工作经历，" /></span><br /><span aria-hidden="true"><HoverText text="步履不停。" /></span></h3></div>
       <p className="career-scene-intro">从产品渲染到品牌视觉，<br />在商业项目中持续打磨设计与协作。</p>
     </div>
     <div className="career-options" role="group" aria-label="工作经历，悬停或选择以查看高亮">

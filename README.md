@@ -1,5 +1,13 @@
 # Harvey 个人作品集
 
+2026-11-05 更新：首屏视频恢复原始视频流，黑色耳机 720p/60fps（源文件分辨率）、白色耳机 1080p/25fps，移除音轨但不二次压缩。当前路径为 `assets/video/hero-black-original.mp4` 与 `hero-white-original.mp4`。
+
+仓库 `kkk456123/3` 的正确图片地址示例是 `https://kkk456123.github.io/3/assets/responsive/067-1280.webp`。本地已按 `/3/` 子目录验证全部 256 个图片文件。若线上仍破图，请检查仓库内是否存在 `public/assets/responsive/067-1280.webp`，并确认 Actions 中最新提交部署成功。图片显示破图时不能仅凭截图认定 GitHub 压缩了素材；Pages 不会对上传的视频和图片二次编码。
+
+建议使用 GitHub Desktop 完整同步文件：将仓库克隆到本地，将本包 `harvey-portfolio` 文件夹内的内容复制进克隆目录（包括 `.github`、`scripts`、`public`、`src`，不要再套一层目录），提交后 Push origin。不要将整个 ZIP 上传到仓库代替解压内容，也不要只上传 `src/data.js` 或漏掉响应式图片目录。大量图片在网页拖拽上传时应核对是否全部完成。
+
+`npm run build` 现在还会检查 `dist` 中的全部响应式图片和首页视频与 `public` 一致，并核对仓库子目录；校验失败时自动停止部署。`public/.nojekyll` 同步输出到部署目录。
+
 这是一个使用 React + Vite 构建的个人作品集基础版本，面向视觉设计、AI 设计和品牌设计展示。页面使用深色视觉系统、视频 Hero、真实作品素材、作品详情弹窗、微信二维码和联系方式收尾页。
 
 ## 本地运行
@@ -143,3 +151,13 @@ USAMS 详情页使用提供的 `作品集网站/USAMS排版.jpg`，原图为 192
 播放任意一段详情视频时会暂停另一段；打开作品详情时暂停首页背景视频，关闭详情时暂停详情视频并按系统动态偏好恢复首页背景。再次打开时，第一段从头自动播放，第二段恢复等待点击。原始分镜和封面分别保存在 `source-assets/motion-storyboard.jpg`、`source-assets/motion-cover.png`，部署运行无需访问原来的 D 盘路径。
 
 两个详情播放器均使用网站自定义控制栏，关闭原生 controls，不提供下载菜单；同时设置 `controlsList="nodownload noremoteplayback"`、禁用画中画/远程播放及视频区域右键菜单，视频层不直接接收鼠标事件，使用独立交互层控制播放。这些设置用于减少浏览器浮动视频工具栏，浏览器或扩展强制注入的下载工具仍可能需要在其设置中关闭；公开的视频资源依然可通过网络请求获取。
+# GitHub Pages 图片路径修复（2026-11-05）
+
+作品封面、首屏切片、弹窗图集和详情视频封面的运行路径已统一为 `assets/responsive/文件名.webp`，配置中不带开头的 `/`。`src/data.js` 的首屏切片直接引用 `001-thumb.webp` 等缩略图；大图配置位于同文件及其导入的 `src/projectGalleries.js`、`src/lifestyleGallery.js`。`src/imageManifest.json` 的全部原图、640、1280、thumb 地址也已同步，原图分辨率、作品内容和裁切边界均保留。
+
+渲染时统一由 `src/media.js` 添加 Vite 的 `BASE_URL`。例如仓库名为 `portfolio` 时，最终图片地址是 `/portfolio/assets/responsive/001-thumb.webp`；请勿手动在数据路径前加 `/` 或 `public/`。工作流会根据 `GITHUB_REPOSITORY` 自动生成部署子目录。
+
+已使用生产构建的 `/portfolio/` 子目录验证全部 256 个响应式图片文件，覆盖桌面、手机和全部五个作品详情。`npm run check:images` 可单独检查图片；`npm run build` 会自动先执行检查，缺图、错误的大小写或非标准路径会中止构建。
+
+更新已部署网站时，请用本次压缩包中的项目内容更新仓库根目录，尤其是 `src/`、`scripts/`、`public/assets/responsive/`、`package.json` 和 `.github/workflows/deploy.yml`，不要只覆盖 `data.js`。提交到 `main` 后等待 Actions 的 Deploy to GitHub Pages 完成，再强制刷新网页。原来可用的 Pages 设置无需重复开启；部署来源应保持 GitHub Actions。
+
